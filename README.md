@@ -170,6 +170,7 @@ Go to **GitHub repo → Settings → Secrets and variables → Actions → New r
 | `CE_APP_NAME` | App name in Code Engine (e.g. `marketing-dashboard`) |
 | `CE_REGION` | IBM Cloud region (e.g. `us-south`) |
 | `CE_RESOURCE_GROUP` | IBM Cloud resource group name (e.g. `itz-wxo-6a38d777316a5cae0b274f`) |
+| `CE_PORT` | Container listening port (e.g. `3000`) |
 | `WATSONX_API_KEY` | watsonx.ai API key |
 | `WATSONX_PROJECT_ID` | watsonx.ai project ID |
 | `WATSONX_URL` | watsonx.ai endpoint URL |

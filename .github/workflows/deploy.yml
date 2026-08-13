@@ -14,6 +14,7 @@
 #   CE_REGION               - IBM Cloud region, e.g. "us-south"
 #   CE_RESOURCE_GROUP       - IBM Cloud resource group name
 #                             e.g. "itz-wxo-6a38d777316a5cae0b274f"
+#   CE_PORT                 - Container listening port, e.g. "3000"
 #   WATSONX_API_KEY         - watsonx.ai API key (injected at runtime)
 #   WATSONX_PROJECT_ID      - watsonx.ai project ID
 #   WATSONX_URL             - watsonx.ai endpoint URL
@@ -164,7 +165,7 @@ jobs:
               --name "$APP_NAME" \
               --image "$IMAGE" \
               --registry-secret icr-secret \
-              --env PORT=3000 \
+              --port "${{ secrets.CE_PORT }}" \
               --env WATSONX_API_KEY="${{ secrets.WATSONX_API_KEY }}" \
               --env WATSONX_PROJECT_ID="${{ secrets.WATSONX_PROJECT_ID }}" \
               --env WATSONX_URL="${{ secrets.WATSONX_URL }}" \
@@ -176,12 +177,11 @@ jobs:
               --name "$APP_NAME" \
               --image "$IMAGE" \
               --registry-secret icr-secret \
-              --env PORT=3000 \
+              --port "${{ secrets.CE_PORT }}" \
               --env WATSONX_API_KEY="${{ secrets.WATSONX_API_KEY }}" \
               --env WATSONX_PROJECT_ID="${{ secrets.WATSONX_PROJECT_ID }}" \
               --env WATSONX_URL="${{ secrets.WATSONX_URL }}" \
               --env WATSONX_MODEL_ID="${{ secrets.WATSONX_MODEL_ID }}" \
-              --port 3000 \
               --min-scale 1 \
               --max-scale 3 \
               --cpu 0.5 \
