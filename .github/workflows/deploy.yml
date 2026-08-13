@@ -12,6 +12,8 @@
 #   CE_APP_NAME             - Code Engine application name
 #                             e.g. "marketing-dashboard"
 #   CE_REGION               - IBM Cloud region, e.g. "us-south"
+#   CE_RESOURCE_GROUP       - IBM Cloud resource group name
+#                             e.g. "itz-wxo-6a38d777316a5cae0b274f"
 #   WATSONX_API_KEY         - watsonx.ai API key (injected at runtime)
 #   WATSONX_PROJECT_ID      - watsonx.ai project ID
 #   WATSONX_URL             - watsonx.ai endpoint URL
@@ -128,7 +130,8 @@ jobs:
       - name: Login to IBM Cloud
         run: |
           ibmcloud login --apikey "${{ secrets.IBM_CLOUD_API_KEY }}" \
-            -r "${{ secrets.CE_REGION }}"
+            -r "${{ secrets.CE_REGION }}" \
+            -g "${{ secrets.CE_RESOURCE_GROUP }}"
 
       - name: Target Code Engine project
         run: |
