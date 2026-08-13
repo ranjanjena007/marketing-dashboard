@@ -202,3 +202,5 @@ Watsonx credentials are **never baked into the image** — they are injected as 
 
 The pipeline deploys with `--min-scale 1 --max-scale 3 --cpu 0.5 --memory 1G`.  
 Adjust these flags in `deploy.yml` to match your workload.
+
+# updated for testing github actions
