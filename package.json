@@ -1,0 +1,22 @@
+{
+  "name": "marketing-dashboard",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Q3 2024 Marketing Campaign Analytics Dashboard with watsonx.ai Chatbot",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "xlsx": "^0.18.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}

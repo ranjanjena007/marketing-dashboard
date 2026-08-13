@@ -1,0 +1,22 @@
+# Source control
+.git/
+.gitignore
+
+# Dependencies (reinstalled inside image)
+node_modules/
+
+# Secrets — never bake into the image
+config.env
+.env
+.env.*
+
+# macOS / editor noise
+.DS_Store
+.vscode/
+.idea/
+
+# Data files not needed at runtime
+data/
+
+# Docs
+README.md
