@@ -128,8 +128,7 @@ jobs:
       - name: Login to IBM Cloud
         run: |
           ibmcloud login --apikey "${{ secrets.IBM_CLOUD_API_KEY }}" \
-            -r "${{ secrets.CE_REGION }}" \
-            --no-region
+            -r "${{ secrets.CE_REGION }}"
 
       - name: Target Code Engine project
         run: |
